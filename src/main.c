@@ -8,15 +8,20 @@
 
 #include <stdio.h>
 #include <pthread.h>
+#include "wiringPi.h"
 
-static void threadTest(void)
+static void *threadTest(void *argument)
 {
 	printf("Thread!!\n");
+	return NULL;
 }
+
+
 
 int main(void)
 {
 	pthread_t thread;
+    wiringPiSetupGpio () ;
 	printf("hello Word\n");
 
 	pthread_create(&thread,NULL,threadTest,NULL);
