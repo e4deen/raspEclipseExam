@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <pthread.h>
-#include "wiringPi.h"
+#include "wiringPi/wiringPi.h"
 
 static void *threadTest(void *argument)
 {
